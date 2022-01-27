@@ -17,8 +17,6 @@ export default function Cast() {
   
     return (
         <>
-      
-      
             <ul className={s.cast}>
                 {cast && cast.map(actor =>
                     <li key={actor.id} className={s.item}>

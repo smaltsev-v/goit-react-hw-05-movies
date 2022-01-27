@@ -20,6 +20,7 @@
 .moviesItem {
   width: 294px;
   margin: 15px;
+  color: #fff;
 }
 
 .movieTitle {
@@ -28,5 +29,5 @@
   font-family: "Bangers", sans-serif;
   font-size: 18px;
   letter-spacing: 0.14em;
-  color: var(--accentColor);
+  color: #fff;
 }
