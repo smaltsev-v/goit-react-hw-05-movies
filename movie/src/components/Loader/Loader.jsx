@@ -6,7 +6,7 @@ export default function App ()  {
   return (
     <div className={s.loader}>
       <ImSpinner
-        fill="#3f51b5"
+        fill="#7f7c94"
           
         className="icon-spin"
       />

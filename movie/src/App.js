@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Appbar />
 
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<Loading/>}>
         <Switch>
           <Route exact path="/">
             <HomeView />
