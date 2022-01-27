@@ -1,7 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { useParams, useRouteMatch, Route, NavLink } from "react-router-dom";
 import * as MoviesApi from '../../services/MoviesApi';
-import Loading from './components/Loader';
+import Loading from '../Loader';
 const Cast = lazy(() => import('../Cast'));
 const Reviews = lazy(() => import('../Reviews'));
 
