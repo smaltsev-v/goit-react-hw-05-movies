@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { useParams, useRouteMatch, Route, NavLink } from "react-router-dom";
 import * as MoviesApi from '../../services/MoviesApi';
+import Loading from './components/Loader';
 const Cast = lazy(() => import('../Cast'));
 const Reviews = lazy(() => import('../Reviews'));
 
@@ -33,7 +34,7 @@ export default function MovieDetailsPage() {
                 </li>
           
             </ul>
-            <Suspense fallback={<h1>Loading</h1>}>
+            <Suspense fallback={<Loading/>}>
                 <Route exact path={`${path}/cast`}>
                     <Cast />
                 </Route>
