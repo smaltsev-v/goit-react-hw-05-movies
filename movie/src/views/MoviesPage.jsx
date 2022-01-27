@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { Link, useRouteMatch } from "react-router-dom";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import propTypes from 'prop-types'; 
+
+import 'react-toastify/dist/ReactToastify.css'; 
 import * as MoviesApi from '../services/MoviesApi'
 import s from './MoviesPage.module.css';
 
@@ -37,19 +36,7 @@ function SearchBar() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (query.trim() === '') {
-      toast.error('Введите запрос.', {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      
-      return;
-    }
+     
 
         setQuery(inputText)
 

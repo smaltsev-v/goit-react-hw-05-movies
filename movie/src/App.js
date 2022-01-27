@@ -1,8 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import Appbar from "./components/AppBar/AppBar";
+import Loading from './components/Loader';
 import "./App.css";
-import { ToastContainer } from 'react-toastify';
+
 
 const HomeView = lazy(() =>
   import("./views/HomeView" )
@@ -40,17 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Suspense>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      
     </div>
   );
 }
