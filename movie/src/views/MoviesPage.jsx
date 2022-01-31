@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ImSearch } from 'react-icons/im';
 import { Link, useRouteMatch } from "react-router-dom";
 
-import 'react-toastify/dist/ReactToastify.css'; 
+
 import * as MoviesApi from '../services/MoviesApi'
 import s from './MoviesPage.module.css';
 

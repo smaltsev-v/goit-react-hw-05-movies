@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as MoviesApi from '../../services/MoviesApi';
+import {  toast } from 'react-toastify';
+
 
 export default function Cast() {
   const [reviews, setReviews] = useState(null)
@@ -9,6 +11,7 @@ export default function Cast() {
     MoviesApi.fetchReviews(movieId).then(setReviews)
     
   }, [movieId])
+  
   return (
     <>
       <ul>
@@ -19,7 +22,10 @@ export default function Cast() {
 
       </ul>
 
-      {reviews && reviews.length < 1 && <p>No any reviews about this movie</p>}
+      {reviews && reviews.length <1 && toast.error("No any reviews about this movie")}
+    
     </>
+
+    
   );
 }
